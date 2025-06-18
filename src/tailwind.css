@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 border border-transparent font-medium shadow-sm outline-none focus:ring-2 focus:ring-offset-2;
+    @apply btn-primary;
+    @apply btn-md;
+  }
+
+  .btn-primary   { @apply text-white    bg-indigo-600  hover:bg-indigo-700  focus:ring-indigo-500; }
+  .btn-success   { @apply text-white    bg-green-600   hover:bg-green-700   focus:ring-green-500; }
+  .btn-danger    { @apply text-white    bg-red-600     hover:bg-red-700     focus:ring-red-500;  }
+  .btn-warning   { @apply text-dark     bg-amber-300   hover:bg-amber-400   focus:ring-amber-500; }
+  .btn-white     { @apply text-gray-700 bg-white       hover:bg-gray-50     focus:ring-gray-400 border-gray-300; }
+  .btn-link      { @apply link          bg-transparent hover:bg-transparent focus:ring-link shadow-none; }
+
+  .btn-primary:disabled   { @apply opacity-50 cursor-not-allowed hover:bg-indigo-600; }
+  .btn-success:disabled   { @apply opacity-50 cursor-not-allowed hover:bg-green-600; }
+  .btn-danger:disabled    { @apply opacity-50 cursor-not-allowed hover:bg-red-600; }
+  .btn-warning:disabled   { @apply opacity-50 cursor-not-allowed hover:bg-amber-300; }
+  .btn-white:disabled     { @apply opacity-50 cursor-not-allowed hover:bg-white; }
+  .btn-link:disabled      { @apply opacity-50 cursor-not-allowed hover:bg-transparent hover:text-link no-underline; }
+
+  .btn-xs { @apply px-4 py-1 text-xs   rounded; }
+  .btn-sm { @apply px-5 py-2 text-sm   rounded-md leading-4; }
+  .btn-md { @apply px-6 py-2 text-base rounded-md; }
+  .btn-lg { @apply px-7 py-2 text-lg   rounded-md; }
+  .btn-xl { @apply px-8 py-3 text-xl   rounded-md; }
+}
+
+.CodeMirror {
+  @apply flex-1;
+}
+

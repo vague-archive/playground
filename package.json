@@ -1,0 +1,31 @@
+{
+  "name": "void-playground",
+  "module": "src/server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/server.ts",
+    "start": "bun run src/server.ts",
+    "css": "bun run bundle:css --watch",
+    "bundle": "bun run bundle:css && bun run bundle:sdk && bun run bundle:sdk:browser",
+    "bundle:css": "tailwindcss -i src/tailwind.css -o public/styles.css",
+    "bundle:sdk": "esbuild --bundle --minify --format=esm --platform=browser --outdir=./sdk/0.3.173 src/sdk/sdk.ts",
+    "bundle:sdk:browser": "esbuild --bundle --minify --format=esm --platform=browser --outdir=./sdk/0.3.173 src/sdk/browser.ts"
+  },
+  "dependencies": {
+    "@types/bun": "latest",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/express": "^4.17.21",
+    "cookie-parser": "^1.4.6",
+    "esbuild": "^0.20.2",
+    "express": "^4.19.2",
+    "ts-dedent": "^2.2.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "latest",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@vaguevoid/sdk": "0.3.173",
+    "jsonwebtoken": "^9.0.2",
+    "tailwindcss": "^3.4.3"
+  }
+}

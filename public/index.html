@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head class="h-screen">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Playground</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js" integrity="sha512-I6CdJdruzGtvDyvdO4YsiAq+pkWf2efgd1ZUSK2FnM/u2VuRASPC7GowWQrWyjxCZn6CT89s3ddGI+be0Ak9Fg==" crossOrigin="anonymous" referrerPolicy="no-referrer"></script>
+  <script src="./script.js" type="module"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css" integrity="sha512-uf06llspW44/LZpHzHT6qBOIVODjWtv4MxCricRxkzvopAlSWnTf6hpZTFxuuZcuNE9CBQhqE0Seu1CoRk84nQ==" crossOrigin="anonymous" referrerPolicy="no-referrer"/>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="h-screen">
+  <div class="h-full flex">
+
+    <!-- LHS CODE EDITORS -->
+    <div class="flex-1 flex flex-col">
+
+      <!-- TOP EDITOR -->
+      <div class="px-6 py-2 bg-gray-100 border-y-2">main.ts</div>
+      <textarea id="editor-main"></textarea>
+      <div id="errors-main" class="text-red-500 p-2"></div>
+
+      <!-- BOTTOM EDITOR -->
+      <div class="px-6 py-2 bg-gray-100 border-y-2">ball.ts</div>
+      <textarea id="editor-other"></textarea>
+      <div id="errors-other" class="text-red-500 p-2"></div>
+ 
+    </div>
+
+    <!-- RHS PREVIEW IFRAME -->
+    <div class="flex-1">
+      <iframe id="preview" class="w-full h-full bg-black">
+      </iframe>
+    </div>
+
+  </div>
+</body>
+</html>
